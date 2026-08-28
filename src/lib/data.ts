@@ -103,7 +103,7 @@ export type FaqItem = {
 export const FAQS: FaqItem[] = [
   {
     question: 'What are your rental rates?',
-    answer: 'King\'s Court from $2,000 · Bethel Ballroom from $5,000 · Both spaces from $6,000',
+    answer: 'King’s Court from $2,000 (Mon–Thu; Fri $2,500, Sat $3,000, Sun $2,500). Bethel Ballroom from $5,000 (Fri/Sun $5,500, Sat $6,500). Both spaces from $6,000 (Fri $7,500, Sat $8,500, Sun $6,500). Sunday events open at 2pm.',
   },
   {
     question: 'What is your guest capacity?',

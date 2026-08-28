@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { VENUE_PACKAGES } from '@/lib/pricing';
 
 export default function PricingPreview() {
@@ -49,22 +49,36 @@ export default function PricingPreview() {
                 </span>
               ) : null}
               <p className="text-[#C5A572] text-[10px] tracking-[0.3em] uppercase">
-                {pkg.name}
+                {pkg.capacity}
               </p>
+              <p className="font-serif text-2xl text-white mt-2">{pkg.name}</p>
               <p className="font-serif text-4xl text-white mt-3">{pkg.price}</p>
+              <p className="text-white/45 text-xs tracking-[0.12em] uppercase mt-1">
+                {pkg.priceNote}
+              </p>
               <p className="text-white/55 text-sm leading-relaxed mt-4 mb-6">
                 {pkg.description}
               </p>
-              <ul className="flex flex-col gap-2.5 mb-8 flex-1">
-                {pkg.features.slice(0, 5).map((feature) => (
-                  <li key={feature} className="flex gap-2 text-sm text-white/65">
-                    <Check size={14} className="text-[#C5A572] flex-shrink-0 mt-0.5" />
-                    {feature}
+              <ul className="flex flex-col gap-2 mb-8 flex-1">
+                {pkg.rates.map((rate) => (
+                  <li
+                    key={rate.label}
+                    className="flex items-baseline justify-between gap-3 text-sm text-white/65"
+                  >
+                    <span>
+                      {rate.label}
+                      {rate.note ? (
+                        <span className="block text-[11px] text-white/40">
+                          {rate.note}
+                        </span>
+                      ) : null}
+                    </span>
+                    <span className="text-white">{rate.price}</span>
                   </li>
                 ))}
               </ul>
               <Link
-                href="/pricing"
+                href={`/pricing#${pkg.id}`}
                 className="inline-flex items-center gap-2 text-[#C5A572] text-xs tracking-[0.2em] uppercase hover:gap-3 transition-all"
               >
                 View Details <ArrowRight size={12} />

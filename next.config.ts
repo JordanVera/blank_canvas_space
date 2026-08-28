@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: 'prestigeeventshouston.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'video.squarespace-cdn.com',
+        pathname: '/content/v1/**',
+      },
     ],
   },
   async redirects() {

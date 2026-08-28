@@ -6,7 +6,7 @@ import { COMPANY } from '@/lib/data';
 export const metadata: Metadata = {
   title: `Pricing | ${COMPANY.name}`,
   description:
-    'Venue packages from $1,150 to $1,600 plus bartending add-on. All-inclusive bridal and baby shower packages at Charming Occasions in Webster, TX.',
+    "King's Court from $2,000, Bethel Ballroom from $5,000, or both spaces from $6,000. Day-of-week venue pricing, décor packages, and video tours in Houston, TX.",
 };
 
 export default function PricingPage() {
@@ -14,8 +14,8 @@ export default function PricingPage() {
     <>
       <section className="relative h-64 sm:h-80 overflow-hidden">
         <Image
-          src="/gallery/gallery-06.jpeg"
-          alt="Charming Occasions venue packages"
+          src="/gallery/gallery-06.jpg"
+          alt="The Blank Canvas Space venue packages"
           fill
           priority
           className="object-cover object-center"
