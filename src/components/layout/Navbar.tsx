@@ -45,11 +45,11 @@ export default function Navbar() {
       >
         <Link href="/" className="flex shrink-0 items-center gap-2 pl-1">
           <Image
-            src="/logo.png"
+            src="/logo-main.png"
             alt={COMPANY.name}
             width={160}
             height={48}
-            className="h-12 w-auto sm:h-16"
+            className="h-12 w-auto"
             priority
           />
         </Link>
